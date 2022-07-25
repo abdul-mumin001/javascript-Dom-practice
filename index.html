@@ -4,7 +4,7 @@
     
 </head>
 <body>
-    <button class="MyButton1">ADD</button>
+    <!-- <button class="MyButton1">ADD</button>
     <button class="MyButton2">REMOVE</button>
     <h1></h1>
     <button class="MyButton3">Player list</button>
@@ -15,32 +15,54 @@
             <li>sachin</li>
             <li>Urman Malik</li>
         </ul>
-    </div>
+    </div> -->
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Address">
+    <button>Submit</button>
+    <div></div>
     <script>
-        let button=document.querySelector(".MyButton1");
-        let button2=document.querySelector(".MyButton2");
-        let heading=document.querySelector("h1")
-        button.addEventListener("click",Myfunction2);
-        button2.addEventListener("click",()=>heading.innerHTML="")
-        function Myfunction2(){
-            heading.innerHTML +="Click over here"
-        }
+        // let button=document.querySelector(".MyButton1");
+        // let button2=document.querySelector(".MyButton2");
+        // let heading=document.querySelector("h1")
+        // button.addEventListener("click",Myfunction2);
+        // button2.addEventListener("click",()=>heading.innerHTML="")
+        // function Myfunction2(){
+        //     heading.innerHTML +="Click over here"
+        // }
 
 
 
 
-        let button3=document.querySelector(".MyButton3");
-        let div=document.querySelector("div")
-        button3.addEventListener("click",Myfunction);
+        // let button3=document.querySelector(".MyButton3");
+        // let div=document.querySelector("div")
+        // button3.addEventListener("click",Myfunction);
+        // function Myfunction(){
+        //     if(div.style.display=="none"){
+        //         div.style.display="Block"
+        //     }else{
+        //         div.style.display="none"
+        //     }
+        // }
+
+
+
+
+        let div =document.querySelector("div");
+        let button=document.querySelector("button");
+        button.addEventListener("click",Myfunction);
         function Myfunction(){
-            if(div.style.display=="none"){
-                div.style.display="Block"
-            }else{
-                div.style.display="none"
-            }
+            let Name=document.querySelector("input[placeholder='Name']")
+            let Address=document.querySelector("input[placeholder='Address']")
+            let Name_data=Name.value;
+            let Address_data=Address.value;
+            div.innerText +=`Name:- ${Name_data}
+            Address:- ${Address_data}`
+
+            Name.value=""
+            Address.value=""
         }
 
-        
+
     </script>
 </body>
 </html>
