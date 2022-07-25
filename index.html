@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <button class="MyButton1">ADD</button>
+    <button class="MyButton2">REMOVE</button>
+    <h1></h1>
+    <button class="MyButton3">Player list</button>
+    <div style="display: none; background-color:aqua; ">
+        <ul>
+            <li>Virat</li>
+            <li>Rohit</li>
+            <li>sachin</li>
+            <li>Urman Malik</li>
+        </ul>
+    </div>
+    <script>
+        let button=document.querySelector(".MyButton1");
+        let button2=document.querySelector(".MyButton2");
+        let heading=document.querySelector("h1")
+        button.addEventListener("click",Myfunction2);
+        button2.addEventListener("click",()=>heading.innerHTML="")
+        function Myfunction2(){
+            heading.innerHTML +="Click over here"
+        }
+
+
+
+
+        let button3=document.querySelector(".MyButton3");
+        let div=document.querySelector("div")
+        button3.addEventListener("click",Myfunction);
+        function Myfunction(){
+            if(div.style.display=="none"){
+                div.style.display="Block"
+            }else{
+                div.style.display="none"
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
